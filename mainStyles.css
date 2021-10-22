@@ -1,0 +1,220 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  color: #D0D6F9;
+  font-family: "Barlow", sans-serif;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.5rem;
+  z-index: 4;
+}
+
+nav .hamburger:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+nav .links .close {
+  display: none;
+  z-index: 99;
+}
+
+nav .links .nav-links {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 274px;
+  background: rgba(255, 255, 255, 0.04);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  padding: 7.375rem 2rem;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  z-index: 1;
+}
+
+nav .links .nav-links ul {
+  list-style: none;
+  height: 140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: "Barlow Condensed", sans-serif;
+  background: rgba(255, 255, 255, 0);
+}
+
+nav .links .nav-links ul li {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+nav .links .nav-links ul li span {
+  font-weight: 900;
+}
+
+nav .links .nav-links ul li a {
+  color: #D0D6F9;
+  text-decoration: none;
+  position: relative;
+}
+
+nav .links .nav-links ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 110%;
+  width: 100%;
+  height: 2px;
+  background: #D0D6F9;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+
+nav .links .nav-links ul li a:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+@media screen and (min-width: 560px) {
+  nav {
+    margin: 0 0 2rem 0;
+  }
+  nav .hamburger {
+    display: none;
+  }
+  nav .links .nav-links {
+    top: 0;
+    right: 0;
+    height: 96px;
+    width: 70vw;
+    padding: 0 3rem;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    margin: 0 0 9rem 0;
+  }
+  nav .links .nav-links ul {
+    height: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  nav .links .nav-links ul .open {
+    color: white;
+    font-weight: 900;
+  }
+  nav .links .nav-links ul .open::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: calc(100% + 35px);
+    width: 100%;
+    height: 3px;
+    background: #FFF;
+    -webkit-transform-origin: right;
+            transform-origin: right;
+    -webkit-transition: -webkit-transform 0.25s ease-out;
+    transition: -webkit-transform 0.25s ease-out;
+    transition: transform 0.25s ease-out;
+    transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+  }
+  nav .links .nav-links ul .open:hover {
+    cursor: none;
+    pointer-events: none;
+  }
+  nav .links .nav-links ul li span {
+    display: none;
+  }
+  nav .links .nav-links ul li a {
+    color: #D0D6F9;
+    text-decoration: none;
+    position: relative;
+  }
+  nav .links .nav-links ul li a::after {
+    left: 0;
+    top: calc(100% + 35px);
+  }
+}
+
+@media screen and (min-width: 850px) {
+  nav {
+    width: 95vw;
+    height: 96px;
+    margin: 2.5rem 0 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+  }
+  nav .links {
+    height: 100%;
+    position: relative;
+  }
+  nav .links::after {
+    content: '';
+    position: absolute;
+    background: #979797;
+    height: 1px;
+    width: 30vw;
+    right: 95%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  nav .links .nav-links {
+    position: unset;
+    height: 100%;
+    width: 60vw;
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    padding: 0 10rem;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    margin: 0 0 9rem 0;
+  }
+  nav .links .nav-links li a span {
+    display: inline;
+    color: #FFF;
+  }
+}
+/*# sourceMappingURL=mainStyles.css.map */

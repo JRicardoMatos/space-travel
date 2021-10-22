@@ -1,0 +1,258 @@
+body {
+  background: url("./background-crew-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2.7px;
+  font-weight: 400;
+  margin: 0 0 2rem 0;
+}
+
+.intro span {
+  opacity: 0.3;
+  margin: 0 1.125rem 0 0;
+}
+
+.intro .crew-photo-container {
+  width: 90vw;
+  border-bottom: 2px #383B4B solid;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2rem 0 0 0;
+}
+
+.intro .crew-photo-container img {
+  width: 190px;
+  height: 250px;
+}
+
+.crew-info {
+  width: 90vw;
+  margin: 0 auto;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50%;
+}
+
+.crew-info .crew-options {
+  width: 90px;
+  margin: 0 0 2rem 0;
+}
+
+.crew-info .crew-options ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+}
+
+.crew-info .crew-options ul .crew-option {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #979797;
+}
+
+.crew-info .crew-options ul .crew-option:hover {
+  cursor: pointer;
+  background: #b4b4b4;
+}
+
+.crew-info .crew-options ul .selected {
+  background: white;
+}
+
+.crew-info .position p {
+  font-family: 'Bellefair', serif;
+  color: #979797;
+  text-transform: uppercase;
+  margin: 0 0 0.5rem 0;
+}
+
+.crew-info .name h1 {
+  font-family: 'Bellefair', serif;
+  font-size: 1.75rem;
+  color: #FFF;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 0 0 1rem 0;
+}
+
+.crew-info .description p {
+  font-family: 'Barlow', sans-serif;
+  color: #D0D6F9;
+  line-height: 25px;
+  margin: 0 0 2rem 0;
+}
+
+@media screen and (min-width: 560px) {
+  body {
+    background: url("./background-crew-tablet.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .tablet-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 100%;
+  }
+  .intro {
+    margin: 0;
+  }
+  .intro .greeting {
+    position: absolute;
+    left: 5vw;
+    top: 120px;
+  }
+  .intro .crew-photo-container {
+    margin: 3rem 0;
+  }
+  .intro .crew-photo-container img {
+    width: 300px;
+    height: 400px;
+  }
+  .crew-info {
+    width: 90vw;
+    margin: 3rem auto 0 auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .crew-info .position p {
+    font-size: 1.25rem;
+  }
+  .crew-info .name h1 {
+    font-size: 3rem;
+  }
+  .crew-info .description p {
+    width: 65vw;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  body {
+    background: url("./background-crew-desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+  .tablet-flex {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    width: 80vw;
+    height: 80vh;
+    margin: 2rem auto 0 auto;
+  }
+  .intro {
+    margin: 0;
+    width: 50%;
+    height: 100%;
+    padding: 0;
+  }
+  .intro .greeting {
+    position: absolute;
+    left: 10vw;
+    top: 160px;
+    font-size: 1.5rem;
+  }
+  .intro .crew-photo-container {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    border: none;
+  }
+  .intro .crew-photo-container img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    width: 400px;
+  }
+  .crew-info {
+    width: 60%;
+    height: 70%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    text-align: left;
+    margin: 1rem 0;
+  }
+  .crew-info .crew-options {
+    margin: 0;
+    width: 150px;
+  }
+  .crew-info .crew-options ul .crew-option {
+    width: 15px;
+    height: 15px;
+  }
+  .crew-info .position p {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  .crew-info .name h1 {
+    font-size: 3.25rem;
+  }
+  .crew-info .description p {
+    width: 70%;
+    text-align: left;
+    font-size: 1rem;
+    line-height: 28px;
+    margin: 1rem 0 3rem 0;
+  }
+}
+/*# sourceMappingURL=crewStyles.css.map */
