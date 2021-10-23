@@ -8,7 +8,7 @@ console.log(crewName.textContent)
 crewOption.forEach(option => {
     option.addEventListener('click', ()=>{
         crewName.textContent = option.id
-        fetch('/data.json')
+        fetch('./data.json')
             .then(res=> res.json())
             .then(data => {
                 console.log(data)
